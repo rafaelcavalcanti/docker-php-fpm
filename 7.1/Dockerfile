@@ -2,7 +2,7 @@ FROM alpine:edge
 
 ENV TIMEZONE America/Sao_Paulo
 ENV PHP_MEMORY_LIMIT 128M
-ENV XDEBUG_VERSION 2.5.4
+ENV XDEBUG_VERSION 2.6.0
 
 RUN echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 RUN apk update && \
@@ -31,7 +31,6 @@ RUN apk update && \
     php7-json@testing \
     php7-dom@testing \
     php7-pdo@testing \
-    php7-intl@testing \
     php7-zip@testing \
     php7-pdo_mysql@testing \
     php7-sqlite3@testing \
@@ -53,6 +52,7 @@ RUN apk update && \
     php7-dev@testing \
     php7-common@testing \
     php7-tokenizer@testing \
+    php7-intl@testing \
     php7-simplexml@testing
 
 RUN wget http://xdebug.org/files/xdebug-$XDEBUG_VERSION.tgz \
@@ -95,5 +95,3 @@ VOLUME ["/app"]
 
 CMD ["sh"]
 ENTRYPOINT ["sh", "-c"]
-
-
