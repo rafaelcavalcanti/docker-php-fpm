@@ -31,6 +31,7 @@ RUN apk update && \
     php7-json@testing \
     php7-dom@testing \
     php7-pdo@testing \
+    php7-intl@testing \
     php7-zip@testing \
     php7-pdo_mysql@testing \
     php7-sqlite3@testing \
