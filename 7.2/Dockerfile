@@ -1,5 +1,5 @@
 FROM php:7.2.1-fpm
-MAINTAINER Tony C. B. <tonycbatista@gmail.com>
+MAINTAINER Rafael Cavalcanti <rafaelcavalcanti@outlook.com>
 
 ENV TZ America/Sao_Paulo
 ENV PHP_MEMORY_LIMIT 128M
@@ -53,6 +53,7 @@ RUN docker-php-ext-install phar
 RUN docker-php-ext-install simplexml
 RUN docker-php-ext-install soap
 RUN docker-php-ext-install zip
+RUN docker-php-ext-install sockets
 
 # gd php extension
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
